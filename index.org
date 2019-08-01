@@ -34,6 +34,9 @@ REST is about making the programmatic web more like the human web.
 #+ATTR_REVEAL: :frag (appear)
 REpresentational State Transfer
 #+ATTR_REVEAL: :frag (appear)
-This essentially means that the representation returned 
+- _Resources_ are identified by a Uniform Resource Locator, or URL.
+- A representation of that resource can be retrieved at its URL.
+- If the representation is a hypermedia format, it may contain links to other resources that can then be navigated to.
+- The representations are self-describing, i.e., no out-of-band information is needed to transition to nearby resources or states.
 
 * Examples
