@@ -4,5 +4,18 @@
 #+REVEAL_THEME: moon
 
 * The Web
+
+** What is the World Wide Web?
+#+begin_quote
+a system of extensively interlinked hypertext documents: a branch of the Internet (usually preceded by the). Abbreviation: WWW
+
+-- dictionary.com
+#+end_quote
+
+** 
+Documents are linked by hyperlinks
+#+CAPTION: A set of hyperlinked documents
+[[./img/hyperlinking.jpg]]
+
 * REST is HTTP
 * Examples
