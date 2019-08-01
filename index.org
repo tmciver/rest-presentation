@@ -58,4 +58,12 @@ Hypermedia as the engine of application state
 #+ATTR_REVEAL: :frag (appear)
 A strange acronym that embodies all of the previously discussed properties of REST: links in resources are the sole means by which a client transitions to other resources and states, i.e., no hard-coding of this information clients.
 
-* Examples
+* Why Does No One Do it?
+#+ATTR_REVEAL: :frag (appear)
+It's a lot of work!
+#+ATTR_REVEAL: :frag (appear)
+There are benefits but also a lot of cost.
+#+ATTR_REVEAL: :frag (appear)
+Most appropriate for an API that will be consumed by an outside third party.
+#+ATTR_REVEAL: :frag (appear)
+If you're "eating your own dog food", there's not a strong reason to use it.
