@@ -52,4 +52,10 @@ a nonlinear medium of information that includes graphics, audio, video, plain te
 -- Wikipedia
 #+end_quote
 
+** HATEOAS
+#+ATTR_REVEAL: :frag (appear)
+Hypermedia as the engine of application state
+#+ATTR_REVEAL: :frag (appear)
+A strange acronym that embodies all of the previously discussed properties of REST: links in resources are the sole means by which a client transitions to other resources and states, i.e., no hard-coding of this information clients.
+
 * Examples
