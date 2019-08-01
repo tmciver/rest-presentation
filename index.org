@@ -17,6 +17,15 @@ Documents are linked by hyperlinks
 #+CAPTION: A set of hyperlinked documents
 [[./img/hyperlinking.jpg]]
 
+** There Are Two Webs
+#+ATTR_REVEAL: :frag (appear)
+The human web that everyone knows about, and
+#+ATTR_REVEAL: :frag (appear)
+The web for machines (programmatic web).
+
+** 
+REST is about making the programmatic web more like the human web.
+
 * REST
 
 ** What is REST?
