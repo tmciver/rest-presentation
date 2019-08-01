@@ -34,7 +34,7 @@ REST is about making the programmatic web more like the human web.
 #+ATTR_REVEAL: :frag (appear)
 REpresentational State Transfer
 #+ATTR_REVEAL: :frag (appear)
-- _Resources_ are identified by a Uniform Resource Locator, or URL.
+- /Resources/ are identified by a Uniform Resource Locator, or URL.
 - A representation of that resource can be retrieved at its URL.
 - If the representation is a hypermedia format, it may contain links to other resources that can then be navigated to.
 - The representations are self-describing, i.e., no out-of-band information is needed to transition to nearby resources or states.
@@ -44,5 +44,12 @@ REpresentational State Transfer
 - There can be multiple representations of a given resource, e.g., html, csv, json, text, jpg, etc.
 - All of them accesible from the one URL
 - Content negotiation is used to select the desired one (using the *Accept* HTTP header)
+
+** Hypermedia
+#+begin_quote
+a nonlinear medium of information that includes graphics, audio, video, plain text and hyperlinks.
+
+-- Wikipedia
+#+end_quote
 
 * Examples
