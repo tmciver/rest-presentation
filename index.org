@@ -70,7 +70,7 @@ If you're "eating your own dog food", there's not a strong reason to use it.
 
 * So, Is Your API RESTful?
 
-** It Isn't If
+** Your API Isn't If
 #+ATTR_REVEAL: :frag (appear)
 - your API returns plain old JSON (without links)
 - client code has hard-coded URLs or constructs them
