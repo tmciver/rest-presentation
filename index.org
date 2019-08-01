@@ -17,6 +17,8 @@ Documents are linked by hyperlinks
 #+CAPTION: A set of hyperlinked documents
 [[./img/hyperlinking.jpg]]
 
+* The Two Webs
+
 ** There Are Two Webs
 #+ATTR_REVEAL: :frag (appear)
 The human web that everyone knows about, and
@@ -31,5 +33,7 @@ REST is about making the programmatic web more like the human web.
 ** What is REST?
 #+ATTR_REVEAL: :frag (appear)
 REpresentational State Transfer
+#+ATTR_REVEAL: :frag (appear)
+This essentially means that the representation returned 
 
 * Examples
