@@ -17,5 +17,10 @@ Documents are linked by hyperlinks
 #+CAPTION: A set of hyperlinked documents
 [[./img/hyperlinking.jpg]]
 
-* REST is HTTP
+* REST
+
+** What is REST?
+#+ATTR_REVEAL: :frag (appear)
+REpresentational State Transfer
+
 * Examples
