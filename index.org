@@ -1,13 +1,13 @@
-#+TITLE: REST
-#+OPTIONS: toc:1, num:nil
-#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js@3.8.0
+#+TITLE: Introduction to REST
+#+OPTIONS: toc:1, num:nil, timestamp:nil
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 #+REVEAL_THEME: moon
 
-* The Web
+* The (Human) Web
 
-** What is the World Wide Web?
+** What Is the (Human) Web?
 #+begin_quote
-a system of extensively interlinked hypertext documents: a branch of the Internet (usually preceded by the). Abbreviation: WWW
+a system of extensively interlinked hypertext documents: a branch of the Internet (usually preceded by "The"). Abbreviation: WWW
 
 -- dictionary.com
 #+end_quote
@@ -17,29 +17,57 @@ Documents are linked by hyperlinks
 #+CAPTION: A set of hyperlinked documents
 [[./img/hyperlinking.jpg]]
 
-* The Two Webs
-
-** There Are Two Webs
-#+ATTR_REVEAL: :frag (appear)
-The human web that everyone knows about, and
-#+ATTR_REVEAL: :frag (appear)
-The web for machines (programmatic web).
-
 ** 
-REST is about making the programmatic web more like the human web.
+Usually relies on HTML but can also include formats such as PDF, Excel, etc.
+
+* The (Programmatic) Web
+
+** What Is the (Programmatic) Web?
+#+ATTR_REVEAL: :frag (appear)
+- The web used for computer-to-computer communication.
+- In practice operates differently than the human web.
+- Often placed under ~/api/~.
+- REST is about making the programmatic web more like the human web.
 
 * REST
 
 ** What is REST?
 #+ATTR_REVEAL: :frag (appear)
-REpresentational State Transfer
+- Defined by [[https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm][Roy Fielding's dissertation]]. Roy Fielding is the main author of [[https://datatracker.ietf.org/doc/html/rfc2616][the HTTP 1.1 specification]].
+- Stands for REpresentational State Transfer. This refers to transferring a representation of a resource's current state.
+- An architectural style made up of constraints. There is no single REST framework or library. Therefore, implementing it requires knowledge and discipline.
+
+** Constraints of REST
+#+ATTR_REVEAL: :frag (appear)
+- Uniform interface (GET, POST, etc.)
+- Client-server (for free with HTTP)
+- Stateless
+- Cacheable (for free with HTTP)
+- Layered system (for free with HTTP)
+- Executable code (e.g. Javscript, optional)
+
+** Properties of REST
 #+ATTR_REVEAL: :frag (appear)
 - /Resources/ are identified by a Uniform Resource Locator, or URL.
 - A representation of that resource can be retrieved at its URL.
 - If the representation is a hypermedia format, it may contain links to other resources that can then be navigated to.
 - The representations are self-describing, i.e., no out-of-band information is needed to transition to nearby resources or states.
+- HATEOAS - Hypertext As The Engine Of Application State
 
-** Multiple Representations
+** URLs
+#+ATTR_REVEAL: :frag (appear)
+- Identify *and* locate resources on the web.
+- Should *not* identify
+  #+ATTR_REVEAL: :frag (appear)
+  - actions ('get', 'create', 'run')
+  - representation (HTML, JSON, PNG, etc)
+  - client type (mobile)
+  - desired language ('en-us')
+  - client timezone
+  - etc
+- Are implementation details of the server.
+
+** Resource Representations
 #+ATTR_REVEAL: :frag (appear)
 - There can be multiple representations of a given resource, e.g., html, csv, json, text, jpg, etc.
 - All of them accesible from the one URL
@@ -52,26 +80,26 @@ a nonlinear medium of information that includes graphics, audio, video, plain te
 -- Wikipedia
 #+end_quote
 
-** HATEOAS
+** JSON Is Not a Hypermedia!
 #+ATTR_REVEAL: :frag (appear)
-Hypermedia as the engine of application state
-#+ATTR_REVEAL: :frag (appear)
-A strange acronym that embodies all of the previously discussed properties of REST: links in resources are the sole means by which a client transitions to other resources and states, i.e., no hard-coding of this information clients.
+JSON: taking the web out of web development since 2000.
 
-* Why Does No One Do it?
 #+ATTR_REVEAL: :frag (appear)
+- Vanilla JSON is not a hypermedia format so its use means that API is not RESTful.
+- But there are several JSON specifications which are hypermedia, e.g., [[https://json-ld.org/][JSON-LD]], [[https://stateless.group/hal_specification.html][HAL]], [[https://jsonapi.org/][JSONAPI]], etc.
+
+* Why Does No One Seem To Do it?
+
+** 
 It's a lot of work!
-#+ATTR_REVEAL: :frag (appear)
-There are benefits but also a lot of cost.
 #+ATTR_REVEAL: :frag (appear)
 Most appropriate for an API that will be consumed by an outside third party.
 #+ATTR_REVEAL: :frag (appear)
 If you're "eating your own dog food", there's not a strong reason to use it.
-
-* So, Is Your API RESTful?
-
-** Your API Isn't If
 #+ATTR_REVEAL: :frag (appear)
-- your API returns plain old JSON (without links)
-- client code has hard-coded URLs or constructs them
-- the client application contains business logic
+But there are still benefits to be had!
+#+ATTR_REVEAL: :frag (appear)
+[[https://docs.github.com/en/rest][Github]] does it (sort of).
+
+** The End
+Questions?
